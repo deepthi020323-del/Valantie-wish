@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yeah I Know 💕</title>
+
+<style>
+body {
+  margin:0;
+  height:100vh;
+  background: linear-gradient(to bottom, #ffd6eb, #f3c4ff);
+  font-family: 'Comic Sans MS', cursive;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container {
+  text-align:center;
+}
+
+img {
+  width:240px;
+  border-radius:25px;
+  box-shadow:0 0 20px pink;
+  animation:bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  to { transform: scale(1.05); }
+}
+
+.message {
+  margin-top:20px;
+  font-size:20px;
+  color:#8b005d;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.heart {
+  position:absolute;
+  bottom:-20px;
+  font-size:22px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  100% { transform: translateY(-110vh); opacity:0; }
+}
+
+.balloon {
+  position:absolute;
+  top:20px;
+  left:20px;
+  font-size:40px;
+  animation: balloon 4s infinite alternate;
+}
+
+@keyframes balloon {
+  to { transform: translateY(-20px); }
+}
+
+.next-btn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:12px 22px;
+  border:none;
+  border-radius:30px;
+  background:#ff69b4;
+  color:white;
+  cursor:pointer;
+}
+
+audio { display:none; }
+</style>
+</head>
+
+<body>
+
+<div class="balloon">🎈💖</div>
+
+<div class="heart" style="left:10%">💜</div>
+<div class="heart" style="left:30%">💖</div>
+<div class="heart" style="left:50%">💜</div>
+
+<div class="container">
+  <img src="dudu-bubu.jpg">
+  <div class="message">
+    Yeah, I know about you baby 💕<br>
+    You’ll say yes <b>YES</b> 😊
+  </div>
+</div>
+
+<button class="next-btn" onclick="location.href='page3.html'">Next 💌</button>
+
+<audio autoplay loop>
+  <source src="melody.mp3">
+</audio>
+
+</body>
+</html>
