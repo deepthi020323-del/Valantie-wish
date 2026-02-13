@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 60px;
+  color: #b30059;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.yes {
+  background-color: #ff4d88;
+  color: white;
+}
+
+.no {
+  background-color: white;
+  color: #ff4d88;
+  position: absolute;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+audio {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will you be mine forever? 💕</h1>
+
+<button class="yes" onclick="goNext()">Yes 💘</button>
+<button class="no" onmouseover="moveButton()">No 🙈</button>
+
+<audio autoplay loop>
+  <source src="melody.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function goNext() {
+  window.location.href = "page2.html";
+}
+
+function moveButton() {
+  const button = document.querySelector(".no");
+  button.style.top = Math.random() * window.innerHeight + "px";
+  button.style.left = Math.random() * window.innerWidth + "px";
+}
+
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 500);
+</script>
+
+</body>
+</html>
