@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Love 💝</title>
+
+<style>
+body {
+  margin:0;
+  height:100vh;
+  background: linear-gradient(to bottom, #ffd6eb, #f3c4ff);
+  font-family:'Comic Sans MS', cursive;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.gift {
+  font-size:90px;
+  cursor:pointer;
+  animation: shake 1.5s infinite;
+}
+
+@keyframes shake {
+  50% { transform: rotate(5deg); }
+}
+
+.message {
+  display:none;
+  background:white;
+  padding:25px;
+  border-radius:25px;
+  max-width:85%;
+  text-align:center;
+}
+
+audio { display:none; }
+</style>
+</head>
+
+<body>
+
+<div class="gift" onclick="openGift()">🎁</div>
+
+<div class="message" id="msg">
+<b>My Dearest Love ❤️</b><br><br>
+     “Happy Valentine’s Day, my love! 💖 You make every day special just by being in it.<br><br>
+     From the day you entered my life, everything changed beautifully 🌹<br><br>
+     You are my happiness, my safe place, my forever 🫂💖<br><br>
+     I promise to love you always 💍<br><br>
+     Just a reminder that you’re mine… and I’m yours!<br><br>
+<b>I LOVE YOU DA VISWA ❤️🌹</b>
+</div>
+
+<audio autoplay loop>
+  <source src="melody.mp3">
+</audio>
+
+<script>
+function openGift() {
+  document.querySelector(".gift").style.display="none";
+  document.getElementById("msg").style.display="block";
+}
+</script>
+
+</body>
+</html>
